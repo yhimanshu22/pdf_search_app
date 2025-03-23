@@ -1,7 +1,4 @@
-### **README.md**  
-
-```md
-# AI-Powered PDF Search API  
+# PDF Search App
 
 ## **Overview**  
 This project allows users to upload a PDF file and perform semantic searches to find similar content within the document. It uses **FAISS (Facebook AI Similarity Search)** for efficient similarity matching and **Hugging Face's sentence-transformers** for text embeddings.
@@ -19,18 +16,20 @@ This project allows users to upload a PDF file and perform semantic searches to 
 
 ### **1. Clone the Repository**  
 ```sh
-git clone https://github.com/your-repo/pdf-search-api.git
-cd pdf-search-api
+git clone https://github.com/your-repo/pdf_search_app.git
+cd pdf_search_app
 ```
 
-### **2. Set Up a Virtual Environment (Optional but Recommended)**
+### **2. Set Up a Virtual Environment**
 ```sh
 python -m venv venv
 venv\Scripts\activate      # For Windows
 ```
+## For Backend
 
 ### **3. Install Dependencies**  
 ```sh
+cd backend
 pip install -r requirements.txt
 ```
 
@@ -41,6 +40,18 @@ uvicorn main:app --host 127.0.0.1 --port 8000 --reload
 
 The API will now be accessible at **http://127.0.0.1:8000**  
 
+## For Frontend
+
+### **3. Install Dependencies**  
+```sh
+cd frontend
+npm install
+```
+
+### **4. Run the frontend**  
+```sh
+npm run dev
+```
 ---
 
 ## **API Endpoints & Examples**  
@@ -97,14 +108,5 @@ GET /api/search?query="budget deficit" &top_k=5
 - **Hugging Face Transformers** - Text Embeddings  
 - **pdfminer.six** - Extract text from PDFs  
 - **Uvicorn** - ASGI Server  
-
----
-
----
-
----
-⭐ **If you find this project useful, give it a star!** 🚀  
-```
-
 ---
 
